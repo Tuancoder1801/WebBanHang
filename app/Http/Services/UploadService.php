@@ -12,7 +12,7 @@ class UploadService
                 $pathFull = 'uploads/' . date("Y/m/d");
 
                 $request->file('file')->storeAs(
-                    'public/' . $pathFull, $name
+                    $pathFull, $name
                 );
 
                 return '/storage/' . $pathFull . '/' . $name;
